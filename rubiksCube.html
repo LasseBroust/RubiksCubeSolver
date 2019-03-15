@@ -1,0 +1,2259 @@
+<html>
+  <div class="colors">
+    <span
+      class="blok"
+      id="redPicker"
+      onclick="selectColor('red')"
+      style="background-color: red;"
+    ></span>
+    <span
+      class="blok"
+      id="greenPicker"
+      onclick="selectColor('green')"
+      style="background-color: green;"
+    ></span>
+    <span
+      class="blok"
+      id="bluePicker"
+      onclick="selectColor('blue')"
+      style="background-color: blue;"
+    ></span>
+    <span
+      class="blok"
+      id="yellowPicker"
+      onclick="selectColor('yellow')"
+      style="background-color: yellow;"
+    ></span>
+    <span
+      class="blok"
+      id="orangePicker"
+      onclick="selectColor('orange')"
+      style="background-color: orange;"
+    ></span>
+    <span
+      class="blok"
+      id="blackPicker"
+      onclick="selectColor('black')"
+      style="background-color: black; color: white"
+    ></span>
+    <span
+      class="blok"
+      id="resetPicker"
+      onclick="selectColor('')"
+      style="background-color: white"
+      ><span class="position">reset</span></span
+    >
+    <span class="blok" onclick="colorHeleLortet()">colorInAll</span>
+    <span
+      onclick="mapCube()"
+      class="blok"
+    >  
+
+        MAP CUBE 
+      </span>
+      <span
+      onclick="startSolve()"
+      class="blok"
+    >start solve
+  
+    </span>
+    <div style="display: inline-block">
+      <div>
+        <span
+          class="blok"
+          onclick="rotate('green',true)"
+          style="background-color: green"
+        >
+          <span style="position: absolute; top: 10px;"> </span>
+        </span>
+        <span
+          class="blok"
+          onclick="rotate('green',false)"
+          style="background-color: green"
+        >
+          <span style="position: absolute; top: 14px; right: 20px;">
+            I
+          </span>
+        </span>
+        <span
+          class="blok"
+          onclick="rotate('red',true)"
+          style="background-color: red"
+        >
+          <span style="position: absolute; top: 10px;"> </span>
+        </span>
+        <span
+          class="blok"
+          onclick="rotate('red',false)"
+          style="background-color: red"
+        >
+          <span style="position: absolute; top: 14px; right: 20px;">
+            I
+          </span>
+        </span>
+        <span
+          class="blok"
+          onclick="rotate('yellow',true)"
+          style="background-color: yellow"
+        >
+          <span style="position: absolute; top: 10px;"> </span>
+        </span>
+        <span
+          class="blok"
+          onclick="rotate('yellow',false)"
+          style="background-color: yellow"
+        >
+          <span style="position: absolute; top: 14px; right: 20px;">
+            I
+          </span>
+        </span>
+      </div>
+      <div>
+        <span
+          class="blok"
+          onclick="rotate('blue',true)"
+          style="background-color: blue"
+        >
+          <span style="position: absolute; top: 10px;"> </span>
+        </span>
+        <span
+          class="blok"
+          onclick="rotate('blue',false)"
+          style="background-color: blue"
+        >
+          <span style="position: absolute; top: 14px; right: 20px;">
+            I
+          </span>
+        </span>
+        <span
+          class="blok"
+          onclick="rotate('orange',true)"
+          style="background-color: orange"
+        >
+          <span style="position: absolute; top: 10px;"> </span>
+        </span>
+        <span
+          class="blok"
+          onclick="rotate('orange',false)"
+          style="background-color: orange"
+        >
+          <span style="position: absolute; top: 14px; right: 20px;">
+            I
+          </span>
+        </span>
+        <span
+          class="blok"
+          onclick="rotate('black',true)"
+          style="background-color: black"
+        >
+          <span style="position: absolute; top: 10px;"> </span>
+        </span>
+        <span
+          class="blok"
+          onclick="rotate('black',false)"
+          style="background-color: black; color: white"
+        >
+          <span style="position: absolute; top: 14px; right: 20px;">
+            I
+          </span>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div id="redSide">
+    <div>
+      <span id="red1" onclick="colorIn(this.id, 'red')" class="blok 18"
+        ><span class="position">18</span></span
+      >
+      <span id="red2" onclick="colorIn(this.id, 'red')" class="blok 11"
+        ><span class="position">11</span></span
+      >
+      <span id="red3" onclick="colorIn(this.id, 'red')" class="blok 17"
+        ><span class="position">17</span></span
+      >
+    </div>
+    <div>
+      <span id="red4" onclick="colorIn(this.id, 'red')" class="blok 6"
+        ><span class="position">6</span></span
+      >
+      <span id="redCenter" class="blok"><span class="position"></span></span>
+      <span id="red6" onclick="colorIn(this.id, 'red')" class="blok 7"
+        ><span class="position">7</span></span
+      >
+    </div>
+    <div>
+      <span id="red7" onclick="colorIn(this.id, 'red')" class="blok 13"
+        ><span class="position">13</span></span
+      >
+      <span id="red8" onclick="colorIn(this.id, 'red')" class="blok 1"
+        ><span class="position">1</span></span
+      >
+      <span id="red9" onclick="colorIn(this.id, 'red')" class="blok 14"
+        ><span class="position">14</span></span
+      >
+    </div>
+  </div>
+  <div id="blackSide">
+    <div>
+      <span id="black1" onclick="colorIn(this.id, 'black')" class="blok 18"
+        ><span class="position">18</span></span
+      >
+      <span id="black2" onclick="colorIn(this.id, 'black')" class="blok 6"
+        ><span class="position">6</span></span
+      >
+      <span id="black3" onclick="colorIn(this.id, 'black')" class="blok 13"
+        ><span class="position">13</span></span
+      >
+    </div>
+    <div>
+      <span id="black4" onclick="colorIn(this.id, 'black')" class="blok 10"
+        ><span class="position">10</span></span
+      >
+      <span id="blackCenter" class="blok"><span class="position"></span></span>
+      <span id="black6" onclick="colorIn(this.id, 'black')" class="blok 4"
+        ><span class="position">4</span></span
+      >
+    </div>
+    <div>
+      <span id="black7" onclick="colorIn(this.id, 'black')" class="blok 19"
+        ><span class="position">19</span></span
+      >
+      <span id="black8" onclick="colorIn(this.id, 'black')" class="blok 5"
+        ><span class="position">5</span></span
+      >
+      <span id="black9" onclick="colorIn(this.id, 'black')" class="blok 16"
+        ><span class="position">16</span></span
+      >
+    </div>
+  </div>
+  <div id="greenSide">
+    <div>
+      <span id="green1" onclick="colorIn(this.id, 'green')" class="blok 13"
+        ><span class="position">13</span></span
+      >
+      <span id="green2" onclick="colorIn(this.id, 'green')" class="blok 1"
+        ><span class="position">1</span></span
+      >
+      <span id="green3" onclick="colorIn(this.id, 'green')" class="blok 14"
+        ><span class="position">14</span></span
+      >
+    </div>
+    <div>
+      <span id="green4" onclick="colorIn(this.id, 'green')" class="blok 4"
+        ><span class="position">4</span></span
+      >
+      <span id="greenCenter" class="blok"><span class="position"></span></span>
+      <span id="green6" onclick="colorIn(this.id, 'green')" class="blok 2"
+        ><span class="position">2</span></span
+      >
+    </div>
+    <div>
+      <span id="green7" onclick="colorIn(this.id, 'green')" class="blok 16"
+        ><span class="position">16</span></span
+      >
+      <span id="green8" onclick="colorIn(this.id, 'green')" class="blok 3"
+        ><span class="position">3</span></span
+      >
+      <span id="green9" onclick="colorIn(this.id, 'green')" class="blok 15"
+        ><span class="position">15</span></span
+      >
+    </div>
+  </div>
+  <div id="yellowSide">
+    <div>
+      <span id="yellow1" onclick="colorIn(this.id, 'yellow')" class="blok 14"
+        ><span class="position">14</span></span
+      >
+      <span id="yellow2" onclick="colorIn(this.id, 'yellow')" class="blok 7"
+        ><span class="position">7</span></span
+      >
+      <span id="yellow3" onclick="colorIn(this.id, 'yellow')" class="blok 17"
+        ><span class="position">17</span></span
+      >
+    </div>
+    <div>
+      <span id="yellow4" onclick="colorIn(this.id, 'yellow')" class="blok 2"
+        ><span class="position">2</span></span
+      >
+      <span id="yellowCenter" class="blok"><span class="position"></span></span>
+      <span id="yellow6" onclick="colorIn(this.id, 'yellow')" class="blok 12"
+        ><span class="position">12</span></span
+      >
+    </div>
+    <div>
+      <span id="yellow7" onclick="colorIn(this.id, 'yellow')" class="blok 15"
+        ><span class="position">15</span></span
+      >
+      <span id="yellow8" onclick="colorIn(this.id, 'yellow')" class="blok 8"
+        ><span class="position">8</span></span
+      >
+      <span id="yellow9" onclick="colorIn(this.id, 'yellow')" class="blok 20"
+        ><span class="position">20</span></span
+      >
+    </div>
+  </div>
+
+  <div id="blueSide">
+    <div>
+      <span id="blue1" onclick="colorIn(this.id, 'blue')" class="blok 17"
+        ><span class="position">17</span></span
+      >
+      <span id="blue2" onclick="colorIn(this.id, 'blue')" class="blok 11"
+        ><span class="position">11</span></span
+      >
+      <span id="blue3" onclick="colorIn(this.id, 'blue')" class="blok 18"
+        ><span class="position">18</span></span
+      >
+    </div>
+    <div>
+      <span id="blue4" onclick="colorIn(this.id, 'blue')" class="blok 12"
+        ><span class="position">12</span></span
+      >
+      <span id="blueCenter" class="blok"><span class="position"></span></span>
+      <span id="blue6" onclick="colorIn(this.id, 'blue')" class="blok 10"
+        ><span class="position">10</span></span
+      >
+    </div>
+    <div>
+      <span id="blue7" onclick="colorIn(this.id, 'blue')" class="blok 20"
+        ><span class="position">20</span></span
+      >
+      <span id="blue8" onclick="colorIn(this.id, 'blue')" class="blok 9"
+        ><span class="position">9</span></span
+      >
+      <span id="blue9" onclick="colorIn(this.id, 'blue')" class="blok 19"
+        ><span class="position">19</span></span
+      >
+    </div>
+  </div>
+  <div id="orangeSide">
+    <div>
+      <span id="orange1" onclick="colorIn(this.id, 'orange')" class="blok 16"
+        ><span class="position">16</span></span
+      >
+      <span id="orange2" onclick="colorIn(this.id, 'orange')" class="blok 3"
+        ><span class="position">3</span></span
+      >
+      <span id="orange3" onclick="colorIn(this.id, 'orange')" class="blok 15"
+        ><span class="position">15</span></span
+      >
+    </div>
+    <div>
+      <span id="orange4" onclick="colorIn(this.id, 'orange')" class="blok 5"
+        ><span class="position">5</span></span
+      >
+      <span id="orangeCenter" class="blok"><span class="position"></span></span>
+      <span id="orange6" onclick="colorIn(this.id, 'orange')" class="blok 8"
+        ><span class="position">8</span></span
+      >
+    </div>
+    <div>
+      <span id="orange7" onclick="colorIn(this.id, 'orange')" class="blok 19"
+        ><span class="position">19</span></span
+      >
+      <span id="orange8" onclick="colorIn(this.id, 'orange')" class="blok 9"
+        ><span class="position">9</span></span
+      >
+      <span id="orange9" onclick="colorIn(this.id, 'orange')" class="blok 20"
+        ><span class="position">20</span></span
+      >
+    </div>
+  </div>
+  <div id="moves"></div>
+</html>
+
+<style>
+  .colors {
+    position: absolute;
+    left: 450px;
+  }
+  #greenSide {
+    display: inline-block;
+  }
+  .blok:first-child {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    display: inline-block;
+    position: relative;
+  }
+  .blok:not(:first-of-type) {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    /* float: left; */
+    display: inline-block;
+    position: relative;
+  }
+  #redSide {
+    padding-left: 168px;
+  }
+  #yellowSide {
+    display: inline-block;
+  }
+  #orangeSide {
+    padding-left: 168px;
+  }
+  #blueSide {
+    display: inline-block;
+  }
+  #blackSide {
+    display: inline-block;
+  }
+  .position {
+    position: absolute;
+    top: 14px;
+    left: 18px;
+  }
+</style>
+
+<script>
+
+  var moves = [];
+
+  function colorHeleLortet(){
+    red = 8;
+    green = 8;
+    blue = 8;
+    orange = 8;
+    black = 8;
+    yellow = 8;
+    for (var i = 1; i < 10; i++){
+      if (i !== 5){
+        document.getElementById('red' + i).style.backgroundColor = 'red'
+        document.getElementById('black' + i).style.backgroundColor = 'black'
+        document.getElementById('green' + i).style.backgroundColor = 'green'
+        document.getElementById('yellow' + i).style.backgroundColor = 'yellow'
+        document.getElementById('blue' + i).style.backgroundColor = 'blue'
+        document.getElementById('orange' + i).style.backgroundColor = 'orange'
+
+        document.getElementById('black' + i).style.color = 'white'
+      }
+    }
+  }
+  var currentColor = "";
+  var red = 0;
+  var green = 0;
+  var blue = 0;
+  var orange = 0;
+  var black = 0;
+  var yellow = 0;
+
+  function selectColor(color) {
+    currentColor = color;
+  } //****************************************SIKRE MAN IKKE KAN OVERSKRIVE EN ALLEREDE VALGT FARVE
+
+  function colorIn(id, color) {
+    if (currentColor !== "") {
+      if (
+        currentColor === "red" &&
+        document.getElementById(id).style.backgroundColor === ""
+      ) {
+        if (red !== 8) {
+          document.getElementById(id).style.backgroundColor = currentColor;
+          red++;
+          document.getElementById("redPicker").innerHTML = red;
+        }
+      } else if (
+        currentColor === "green" &&
+        document.getElementById(id).style.backgroundColor === ""
+      ) {
+        if (green !== 8) {
+          document.getElementById(id).style.backgroundColor = currentColor;
+          green++;
+          document.getElementById("greenPicker").innerHTML = green;
+        }
+      } else if (
+        currentColor === "blue" &&
+        document.getElementById(id).style.backgroundColor === ""
+      ) {
+        if (blue !== 8) {
+          document.getElementById(id).style.backgroundColor = currentColor;
+          blue++;
+          document.getElementById("bluePicker").innerHTML = blue;
+        }
+      } else if (
+        currentColor === "orange" &&
+        document.getElementById(id).style.backgroundColor === ""
+      ) {
+        if (orange !== 8) {
+          document.getElementById(id).style.backgroundColor = currentColor;
+          orange++;
+          document.getElementById("orangePicker").innerHTML = orange;
+        }
+      } else if (
+        currentColor === "black" &&
+        document.getElementById(id).style.backgroundColor === ""
+      ) {
+        if (black !== 8) {
+          document.getElementById(id).style.backgroundColor = currentColor;
+          document.getElementById(id).style.color = "white";
+          black++;
+          document.getElementById("blackPicker").innerHTML = black;
+        }
+      } else if (
+        currentColor === "yellow" &&
+        document.getElementById(id).style.backgroundColor === ""
+      ) {
+        if (yellow !== 8) {
+          document.getElementById(id).style.backgroundColor = currentColor;
+          yellow++;
+          document.getElementById("yellowPicker").innerHTML = yellow;
+        }
+      }
+    } else {
+      if (document.getElementById(id).style.backgroundColor !== "") {
+        var colorToRemove = document.getElementById(id).style.backgroundColor;
+        document.getElementById(id).style.backgroundColor = "";
+        if (colorToRemove === "red") {
+          red--;
+          document.getElementById("redPicker").innerHTML = red;
+        } else if (colorToRemove === "green") {
+          green--;
+          document.getElementById("greenPicker").innerHTML = green;
+        } else if (colorToRemove === "blue") {
+          blue--;
+          document.getElementById("bluePicker").innerHTML = blue;
+        } else if (colorToRemove === "orange") {
+          orange--;
+          document.getElementById("orangePicker").innerHTML = orange;
+        } else if (colorToRemove === "black") {
+          black--;
+          document.getElementById("blackPicker").innerHTML = black;
+        } else if (colorToRemove === "yellow") {
+          yellow--;
+          document.getElementById("yellowPicker").innerHTML = yellow;
+        }
+      }
+    }
+  }
+
+  document.getElementById("greenCenter").style.backgroundColor = "green";
+  document.getElementById("blackCenter").style.backgroundColor = "black";
+  document.getElementById("blueCenter").style.backgroundColor = "blue";
+  document.getElementById("redCenter").style.backgroundColor = "red";
+  document.getElementById("orangeCenter").style.backgroundColor = "orange";
+  document.getElementById("yellowCenter").style.backgroundColor = "yellow";
+
+  // E = enge, C = corner
+  var blocks;
+  function mapCube() {
+    if (red + green + orange + yellow + blue + black === 48) {
+      blocks = [
+        {
+          homePosition: calculateHome(
+            document.getElementById("green2").style.backgroundColor,
+            document.getElementById("red8").style.backgroundColor,
+            ""
+          ),
+          currentPosition: 1,
+          type: "E",
+          colors: {
+            facingRed: document.getElementById("red8").style.backgroundColor,
+            facingGreen: document.getElementById("green2").style.backgroundColor,
+            facingBlue: "",
+            facingOrange: "",
+            facingYellow: "",
+            facingBlack: ""
+          }
+        },
+        {
+          homePosition: calculateHome(
+            document.getElementById("yellow4").style.backgroundColor,
+            document.getElementById("green6").style.backgroundColor,
+            ""
+          ),
+          currentPosition: 2,
+          type: "E",
+          colors: {
+            facingRed: "",
+            facingGreen: document.getElementById("green6").style.backgroundColor,
+            facingBlue: "",
+            facingOrange: "",
+            facingYellow: document.getElementById("yellow4").style.backgroundColor,
+            facingBlack: ""
+          }
+        },
+        {
+          homePosition: calculateHome(
+            document.getElementById("orange2").style.backgroundColor,
+            document.getElementById("green8").style.backgroundColor,
+            ""
+          ),
+          currentPosition: 3,
+          type: "E",
+          colors: {
+            facingRed: "",
+            facingGreen: document.getElementById("green8").style.backgroundColor,
+            facingBlue: "",
+            facingOrange: document.getElementById("orange2").style.backgroundColor,
+            facingYellow: "",
+            facingBlack: ""
+          }
+        },
+        {
+          homePosition: calculateHome(
+            document.getElementById("black6").style.backgroundColor,
+            document.getElementById("green4").style.backgroundColor,
+            ""
+          ),
+          currentPosition: 4,
+          type: "E",
+          colors: {
+            facingRed: "",
+            facingGreen: document.getElementById("green4").style.backgroundColor,
+            facingBlue: "",
+            facingOrange: "",
+            facingYellow: "",
+            facingBlack: document.getElementById("black6").style.backgroundColor
+          }
+        },
+        {
+          homePosition: calculateHome(
+            document.getElementById("orange4").style.backgroundColor,
+            document.getElementById("black8").style.backgroundColor,
+            ""
+          ),
+          currentPosition: 5,
+          type: "E",
+          colors: {
+            facingRed: "",
+            facingGreen: "",
+            facingBlue: "",
+            facingOrange: document.getElementById("orange4").style.backgroundColor,
+            facingYellow: "",
+            facingBlack: document.getElementById("black8").style.backgroundColor
+          }
+        },
+        {
+          homePosition: calculateHome(
+            document.getElementById("red4").style.backgroundColor,
+            document.getElementById("black2").style.backgroundColor,
+            ""
+          ),
+          currentPosition: 6,
+          type: "E",
+          colors: {
+            facingRed: document.getElementById("red4").style.backgroundColor,
+            facingGreen: "",
+            facingBlue: "",
+            facingOrange: "",
+            facingYellow: "",
+            facingBlack: document.getElementById("black2").style.backgroundColor
+          }
+        },
+        {
+          homePosition: calculateHome(
+            document.getElementById("yellow2").style.backgroundColor,
+            document.getElementById("red6").style.backgroundColor,
+            ""
+          ),
+          currentPosition: 7,
+          type: "E",
+          colors: {
+            facingRed: document.getElementById("red6").style.backgroundColor,
+            facingGreen: "",
+            facingBlue: "",
+            facingOrange: "",
+            facingYellow: document.getElementById("yellow2").style.backgroundColor,
+            facingBlack: ""
+          }
+        },
+        {
+          homePosition: calculateHome(
+            document.getElementById("orange6").style.backgroundColor,
+            document.getElementById("yellow8").style.backgroundColor,
+            ""
+          ),
+          currentPosition: 8,
+          type: "E",
+          colors: {
+            facingRed: "",
+            facingGreen: "",
+            facingBlue: "",
+            facingOrange: document.getElementById("orange6").style.backgroundColor,
+            facingYellow: document.getElementById("yellow8").style.backgroundColor,
+            facingBlack: ""
+          }
+        },
+        {
+          homePosition: calculateHome(
+            document.getElementById("blue8").style.backgroundColor,
+            document.getElementById("orange8").style.backgroundColor,
+            ""
+          ),
+          currentPosition: 9,
+          type: "E",
+          colors: {
+            facingRed: "",
+            facingGreen: "",
+            facingBlue: document.getElementById("blue8").style.backgroundColor,
+            facingOrange: document.getElementById("orange8").style.backgroundColor,
+            facingYellow: "",
+            facingBlack: ""
+          }
+        },
+        {
+          homePosition: calculateHome(
+            document.getElementById("black4").style.backgroundColor,
+            document.getElementById("blue6").style.backgroundColor,
+            ""
+          ),
+          currentPosition: 10,
+          type: "E",
+          colors: {
+            facingRed: "",
+            facingGreen: "",
+            facingBlue: document.getElementById("blue6").style.backgroundColor,
+            facingOrange: "",
+            facingYellow: "",
+            facingBlack: document.getElementById("black4").style.backgroundColor
+          }
+        },
+        {
+          homePosition: calculateHome(
+            document.getElementById("red2").style.backgroundColor,
+            document.getElementById("blue2").style.backgroundColor,
+            ""
+          ),
+          currentPosition: 11,
+          type: "E",
+          colors: {
+            facingRed: document.getElementById("red2").style.backgroundColor,
+            facingGreen: "",
+            facingBlue: document.getElementById("blue2").style.backgroundColor,
+            facingOrange: "",
+            facingYellow: "",
+            facingBlack: ""
+          }
+        },
+        {
+          homePosition: calculateHome(
+            document.getElementById("blue4").style.backgroundColor,
+            document.getElementById("yellow6").style.backgroundColor,
+            ""
+          ),
+          currentPosition: 12,
+          type: "E",
+          colors: {
+            facingRed: "",
+            facingGreen: "",
+            facingBlue: document.getElementById("blue4").style.backgroundColor,
+            facingOrange: "",
+            facingYellow: document.getElementById("yellow6").style.backgroundColor,
+            facingBlack: ""
+          }
+        },
+        {
+          homePosition: calculateHome(
+            document.getElementById("red7").style.backgroundColor,
+            document.getElementById("black3").style.backgroundColor,
+            document.getElementById("green1").style.backgroundColor
+          ),
+          currentPosition: 13,
+          type: "C",
+          colors: {
+            facingRed: document.getElementById("red7").style.backgroundColor,
+            facingGreen: document.getElementById("green1").style.backgroundColor,
+            facingBlue: "",
+            facingOrange: "",
+            facingYellow: "",
+            facingBlack: document.getElementById("black3").style.backgroundColor
+          }
+        },
+        {
+          homePosition: calculateHome(
+            document.getElementById("red9").style.backgroundColor,
+            document.getElementById("green3").style.backgroundColor,
+            document.getElementById("yellow1").style.backgroundColor
+          ),
+          currentPosition: 14,
+          type: "C",
+          colors: {
+            facingRed: document.getElementById("red9").style.backgroundColor,
+            facingGreen: document.getElementById("green3").style.backgroundColor,
+            facingBlue: "",
+            facingOrange: "",
+            facingYellow: document.getElementById("yellow1").style.backgroundColor,
+            facingBlack: ""
+          }
+        },
+        {
+          homePosition: calculateHome(
+            document.getElementById("green9").style.backgroundColor,
+            document.getElementById("orange3").style.backgroundColor,
+            document.getElementById("yellow7").style.backgroundColor
+          ),
+          currentPosition: 15,
+          type: "C",
+          colors: {
+            facingRed: "",
+            facingGreen: document.getElementById("green9").style.backgroundColor,
+            facingBlue: "",
+            facingOrange: document.getElementById("orange3").style.backgroundColor,
+            facingYellow: document.getElementById("yellow7").style.backgroundColor,
+            facingBlack: ""
+          }
+        },
+        {
+          homePosition: calculateHome(
+            document.getElementById("black9").style.backgroundColor,
+            document.getElementById("green7").style.backgroundColor,
+            document.getElementById("orange1").style.backgroundColor
+          ),
+          currentPosition: 16,
+          type: "C",
+          colors: {
+            facingRed: "",
+            facingGreen: document.getElementById("green7").style.backgroundColor,
+            facingBlue: "",
+            facingOrange: document.getElementById("orange1").style.backgroundColor,
+            facingYellow: "",
+            facingBlack: document.getElementById("black9").style.backgroundColor
+          }
+        },
+        {
+          homePosition: calculateHome(
+            document.getElementById("yellow3").style.backgroundColor,
+            document.getElementById("blue1").style.backgroundColor,
+            document.getElementById("red3").style.backgroundColor
+          ),
+          currentPosition: 17,
+          type: "C",
+          colors: {
+            facingRed: document.getElementById("red3").style.backgroundColor,
+            facingGreen: "",
+            facingBlue: document.getElementById("blue1").style.backgroundColor,
+            facingOrange: "",
+            facingYellow: document.getElementById("yellow3").style.backgroundColor,
+            facingBlack: ""
+          }
+        },
+        {
+          homePosition: calculateHome(
+            document.getElementById("blue3").style.backgroundColor,
+            document.getElementById("black1").style.backgroundColor,
+            document.getElementById("red1").style.backgroundColor
+          ),
+          currentPosition: 18,
+          type: "C",
+          colors: {
+            facingRed: document.getElementById("red1").style.backgroundColor,
+            facingGreen: "",
+            facingBlue: document.getElementById("blue3").style.backgroundColor,
+            facingOrange: "",
+            facingYellow: "",
+            facingBlack: document.getElementById("black1").style.backgroundColor
+          }
+        },
+        {
+          homePosition: calculateHome(
+            document.getElementById("blue9").style.backgroundColor,
+            document.getElementById("orange7").style.backgroundColor,
+            document.getElementById("black7").style.backgroundColor
+          ),
+          currentPosition: 19,
+          type: "C",
+          colors: {
+            facingRed: "",
+            facingGreen: "",
+            facingBlue: document.getElementById("blue9").style.backgroundColor,
+            facingOrange: document.getElementById("orange7").style.backgroundColor,
+            facingYellow: "",
+            facingBlack: document.getElementById("black7").style.backgroundColor
+          }
+        },
+        {
+          homePosition: calculateHome(
+            document.getElementById("orange9").style.backgroundColor,
+            document.getElementById("yellow9").style.backgroundColor,
+            document.getElementById("blue7").style.backgroundColor
+          ),
+          currentPosition: 20,
+          type: "C",
+          colors: {
+            facingRed: "",
+            facingGreen: "",
+            facingBlue: document.getElementById("blue7").style.backgroundColor,
+            facingOrange: document.getElementById("orange9").style
+              .backgroundColor,
+            facingYellow: document.getElementById("yellow9").style
+              .backgroundColor,
+            facingBlack: ""
+          }
+        }
+      ];
+      if (isEverythingInOrder()) {
+        console.log('ready');
+      } else {
+        console.log("you fucked up!!!");
+      }
+    } else {
+      alert("please color in all the blocks");
+    }
+  }
+  function rotate(side, clockVise) {
+    if (side === "green") {
+      if (clockVise) {
+        rotateGreenSide();
+        console.log("GREEN");
+        moves.push('GREEN');
+      } else {
+        rotateGreenSide();
+        rotateGreenSide();
+        rotateGreenSide();
+        console.log("GREEN!!!");
+        moves.push("GREEN!");
+      }
+    } else if (side === "red") {
+      if (clockVise) {
+        rotateRedSide();
+        console.log("RED");
+        moves.push("RED");
+      } else {
+        rotateRedSide();
+        rotateRedSide();
+        rotateRedSide();
+        console.log("RED!!!");
+        moves.push("RED!");
+      }
+    } else if (side === "yellow") {
+      if (clockVise) {
+        rotateYellowSide();
+        console.log("YELLOW");
+        moves.push("YELLOW");
+      } else {
+        rotateYellowSide();
+        rotateYellowSide();
+        rotateYellowSide();
+        console.log("YELLOW!!!");
+        moves.push("YELLOW!");
+      }
+    } else if (side === "blue") {
+      if (clockVise) {
+        rotateBlueSide();
+        console.log("BLUE");
+        moves.push("BLUE");
+      } else {
+        rotateBlueSide();
+        rotateBlueSide();
+        rotateBlueSide();
+        console.log("BLUE!!!");
+        moves.push("BLUE!");
+      }
+    } else if (side === "orange") {
+      if (clockVise) {
+        rotateOrangeSide();
+        console.log("ORANGE");
+        moves.push("ORANGE");
+      } else {
+        rotateOrangeSide();
+        rotateOrangeSide();
+        rotateOrangeSide();
+        console.log("ORANGE!!!");
+        moves.push("ORANGE!");
+      }
+    } else if (side === "black") {
+      if (clockVise) {
+        rotateBlackSide();
+        console.log("WHITE");
+        moves.push("WHITE");
+      } else {
+        rotateBlackSide();
+        rotateBlackSide();
+        rotateBlackSide();
+        console.log("WHITE!!!");
+        moves.push("WHITE!");
+      }
+    }
+    saveCurrentSolution();
+  }
+  function renderMapedCube() {
+    document.getElementById("green1").style.backgroundColor = blocks.find(
+      x => x.currentPosition === 13
+    ).colors.facingGreen;
+    document.getElementById("green2").style.backgroundColor = blocks.find(
+      x => x.currentPosition === 1
+    ).colors.facingGreen;
+    document.getElementById("green3").style.backgroundColor = blocks.find(
+      x => x.currentPosition === 14
+    ).colors.facingGreen;
+    document.getElementById("green4").style.backgroundColor = blocks.find(
+      x => x.currentPosition === 4
+    ).colors.facingGreen;
+    document.getElementById("green6").style.backgroundColor = blocks.find(
+        x => x.currentPosition === 2
+    ).colors.facingGreen;
+    document.getElementById("green7").style.backgroundColor = blocks.find(
+        x => x.currentPosition === 16
+    ).colors.facingGreen;
+    document.getElementById("green8").style.backgroundColor = blocks.find(
+      x => x.currentPosition === 3
+    ).colors.facingGreen;
+    document.getElementById("green9").style.backgroundColor = blocks.find(
+        x => x.currentPosition === 15
+    ).colors.facingGreen;
+    document.getElementById("red1").style.backgroundColor = blocks.find(
+      x => x.currentPosition === 18
+    ).colors.facingRed;
+    document.getElementById("red2").style.backgroundColor = blocks.find(
+        x => x.currentPosition === 11
+    ).colors.facingRed;
+    document.getElementById("red3").style.backgroundColor = blocks.find(
+      x => x.currentPosition === 17
+    ).colors.facingRed;
+    document.getElementById("red4").style.backgroundColor = blocks.find(
+        x => x.currentPosition === 6
+    ).colors.facingRed;
+    document.getElementById("red6").style.backgroundColor = blocks.find(
+    x => x.currentPosition === 7
+    ).colors.facingRed;
+    document.getElementById("red7").style.backgroundColor = blocks.find(
+        x => x.currentPosition === 13
+    ).colors.facingRed;
+    document.getElementById("red8").style.backgroundColor = blocks.find(
+      x => x.currentPosition === 1
+    ).colors.facingRed;
+    document.getElementById("red9").style.backgroundColor = blocks.find(
+        x => x.currentPosition === 14
+    ).colors.facingRed;
+    document.getElementById("orange1").style.backgroundColor = blocks.find(
+      x => x.currentPosition === 16
+    ).colors.facingOrange;
+    document.getElementById("orange2").style.backgroundColor = blocks.find(
+      x => x.currentPosition === 3
+    ).colors.facingOrange;
+    document.getElementById("orange3").style.backgroundColor = blocks.find(
+      x => x.currentPosition === 15
+    ).colors.facingOrange;
+    document.getElementById("orange4").style.backgroundColor = blocks.find(
+      x => x.currentPosition === 5
+    ).colors.facingOrange;
+    document.getElementById("orange6").style.backgroundColor = blocks.find(
+      x => x.currentPosition === 8
+    ).colors.facingOrange;
+    document.getElementById("orange7").style.backgroundColor = blocks.find(
+      x => x.currentPosition === 19
+    ).colors.facingOrange;
+    document.getElementById("orange8").style.backgroundColor = blocks.find(
+        x => x.currentPosition === 9
+    ).colors.facingOrange;
+    document.getElementById("orange9").style.backgroundColor = blocks.find(
+        x => x.currentPosition === 20
+    ).colors.facingOrange;
+    document.getElementById("black1").style.backgroundColor = blocks.find(
+        x => x.currentPosition === 18
+    ).colors.facingBlack;
+    document.getElementById("black2").style.backgroundColor = blocks.find(
+      x => x.currentPosition === 6
+    ).colors.facingBlack;
+    document.getElementById("black3").style.backgroundColor = blocks.find(
+      x => x.currentPosition === 13
+    ).colors.facingBlack;
+    document.getElementById("black4").style.backgroundColor = blocks.find(
+      x => x.currentPosition === 10
+    ).colors.facingBlack;
+    document.getElementById("black6").style.backgroundColor = blocks.find(
+      x => x.currentPosition === 4
+    ).colors.facingBlack;
+    document.getElementById("black7").style.backgroundColor = blocks.find(
+      x => x.currentPosition === 19
+    ).colors.facingBlack;
+    document.getElementById("black8").style.backgroundColor = blocks.find(
+      x => x.currentPosition === 5
+    ).colors.facingBlack;
+    document.getElementById("black9").style.backgroundColor = blocks.find(
+      x => x.currentPosition === 16
+    ).colors.facingBlack;
+    document.getElementById("yellow1").style.backgroundColor = blocks.find(
+        x => x.currentPosition === 14
+    ).colors.facingYellow;
+    document.getElementById("yellow2").style.backgroundColor = blocks.find(
+        x => x.currentPosition === 7
+    ).colors.facingYellow;
+    document.getElementById("yellow3").style.backgroundColor = blocks.find(
+      x => x.currentPosition === 17
+    ).colors.facingYellow;
+    document.getElementById("yellow4").style.backgroundColor = blocks.find(
+        x => x.currentPosition === 2
+    ).colors.facingYellow;
+    document.getElementById("yellow6").style.backgroundColor = blocks.find(
+      x => x.currentPosition === 12
+    ).colors.facingYellow;
+    document.getElementById("yellow7").style.backgroundColor = blocks.find(
+      x => x.currentPosition === 15
+    ).colors.facingYellow;
+    document.getElementById("yellow8").style.backgroundColor = blocks.find(
+      x => x.currentPosition === 8
+    ).colors.facingYellow;
+    document.getElementById("yellow9").style.backgroundColor = blocks.find(
+        x => x.currentPosition === 20
+    ).colors.facingYellow;
+    document.getElementById("blue1").style.backgroundColor = blocks.find(
+        x => x.currentPosition === 17
+    ).colors.facingBlue;
+    document.getElementById("blue2").style.backgroundColor = blocks.find(
+      x => x.currentPosition === 11
+    ).colors.facingBlue;
+    document.getElementById("blue3").style.backgroundColor = blocks.find(
+      x => x.currentPosition === 18
+    ).colors.facingBlue;
+    document.getElementById("blue4").style.backgroundColor = blocks.find(
+      x => x.currentPosition === 12
+    ).colors.facingBlue;
+    document.getElementById("blue6").style.backgroundColor = blocks.find(
+      x => x.currentPosition === 10
+    ).colors.facingBlue;
+    document.getElementById("blue7").style.backgroundColor = blocks.find(
+        x => x.currentPosition === 20
+    ).colors.facingBlue;
+    document.getElementById("blue8").style.backgroundColor = blocks.find(
+        x => x.currentPosition === 9
+    ).colors.facingBlue;
+    document.getElementById("blue9").style.backgroundColor = blocks.find(
+      x => x.currentPosition === 19
+    ).colors.facingBlue;
+  }
+  function rotateGreenSide() {
+    for (var i = 0; i < blocks.length; i++) {
+      if (blocks[i].colors.facingGreen !== "") {
+        if (blocks[i].type === "C") {
+          if (blocks[i].currentPosition === 13) {
+            blocks[i].currentPosition = 14;
+            blocks[i].colors.facingYellow = blocks[i].colors.facingRed;
+            blocks[i].colors.facingRed = blocks[i].colors.facingBlack;
+            blocks[i].colors.facingBlack = "";
+          } else if (blocks[i].currentPosition === 14) {
+            blocks[i].currentPosition = 15;
+            blocks[i].colors.facingOrange = blocks[i].colors.facingYellow;
+            blocks[i].colors.facingYellow = blocks[i].colors.facingRed;
+            blocks[i].colors.facingRed = "";
+          } else if (blocks[i].currentPosition === 15) {
+            blocks[i].currentPosition = 16;
+            blocks[i].colors.facingBlack = blocks[i].colors.facingOrange;
+            blocks[i].colors.facingOrange = blocks[i].colors.facingYellow;
+            blocks[i].colors.facingYellow = "";
+          } else if (blocks[i].currentPosition === 16) {
+            blocks[i].currentPosition = 13;
+            blocks[i].colors.facingRed = blocks[i].colors.facingBlack;
+            blocks[i].colors.facingBlack = blocks[i].colors.facingOrange;
+            blocks[i].colors.facingOrange = "";
+          }
+        } else if (blocks[i].type === "E") {
+          if (blocks[i].currentPosition === 1) {
+            blocks[i].currentPosition = 2;
+            blocks[i].colors.facingYellow = blocks[i].colors.facingRed;
+            blocks[i].colors.facingRed = "";
+          } else if (blocks[i].currentPosition === 2) {
+            blocks[i].currentPosition = 3;
+            blocks[i].colors.facingOrange = blocks[i].colors.facingYellow;
+            blocks[i].colors.facingYellow = "";
+          } else if (blocks[i].currentPosition === 3) {
+            blocks[i].currentPosition = 4;
+            blocks[i].colors.facingBlack = blocks[i].colors.facingOrange;
+            blocks[i].colors.facingOrange = "";
+          } else if (blocks[i].currentPosition === 4) {
+            blocks[i].currentPosition = 1;
+            blocks[i].colors.facingRed = blocks[i].colors.facingBlack;
+            blocks[i].colors.facingBlack = "";
+          }
+        }
+      }
+    }
+    renderMapedCube();
+  }
+  function rotateRedSide() {
+    for (var i = 0; i < blocks.length; i++) {
+      if (blocks[i].colors.facingRed !== "") {
+        if (blocks[i].type === "C") {
+          if (blocks[i].currentPosition === 13) {
+            blocks[i].currentPosition = 18;
+            blocks[i].colors.facingBlue = blocks[i].colors.facingBlack;
+            blocks[i].colors.facingBlack = blocks[i].colors.facingGreen;
+            blocks[i].colors.facingGreen = "";
+          } else if (blocks[i].currentPosition === 14) {
+            blocks[i].currentPosition = 13;
+            blocks[i].colors.facingBlack = blocks[i].colors.facingGreen;
+            blocks[i].colors.facingGreen = blocks[i].colors.facingYellow;
+            blocks[i].colors.facingYellow = "";
+          } else if (blocks[i].currentPosition === 17) {
+            blocks[i].currentPosition = 14;
+            blocks[i].colors.facingGreen = blocks[i].colors.facingYellow;
+            blocks[i].colors.facingYellow = blocks[i].colors.facingBlue;
+            blocks[i].colors.facingBlue = "";
+          } else if (blocks[i].currentPosition === 18) {
+            blocks[i].currentPosition = 17;
+            blocks[i].colors.facingYellow = blocks[i].colors.facingBlue;
+            blocks[i].colors.facingBlue = blocks[i].colors.facingBlack;
+            blocks[i].colors.facingBlack = "";
+          }
+        } else if (blocks[i].type === "E") {
+          if (blocks[i].currentPosition === 1) {
+            blocks[i].currentPosition = 6;
+            blocks[i].colors.facingBlack = blocks[i].colors.facingGreen;
+            blocks[i].colors.facingGreen = "";
+          } else if (blocks[i].currentPosition === 6) {
+            blocks[i].currentPosition = 11;
+            blocks[i].colors.facingBlue = blocks[i].colors.facingBlack;
+            blocks[i].colors.facingBlack = "";
+          } else if (blocks[i].currentPosition === 7) {
+            blocks[i].currentPosition = 1;
+            blocks[i].colors.facingGreen = blocks[i].colors.facingYellow;
+            blocks[i].colors.facingYellow = "";
+          } else if (blocks[i].currentPosition === 11) {
+            blocks[i].currentPosition = 7;
+            blocks[i].colors.facingYellow = blocks[i].colors.facingBlue;
+            blocks[i].colors.facingBlue = "";
+          }
+        }
+      }
+    }
+    renderMapedCube();
+  }
+  function rotateYellowSide() {
+    for (var i = 0; i < blocks.length; i++) {
+      if (blocks[i].colors.facingYellow !== "") {
+        if (blocks[i].type === "C") {
+          if (blocks[i].currentPosition === 14) {
+            blocks[i].currentPosition = 17;
+            blocks[i].colors.facingBlue = blocks[i].colors.facingRed;
+            blocks[i].colors.facingRed = blocks[i].colors.facingGreen;
+            blocks[i].colors.facingGreen = "";
+          } else if (blocks[i].currentPosition === 17) {
+            blocks[i].currentPosition = 20;
+            blocks[i].colors.facingOrange = blocks[i].colors.facingBlue;
+            blocks[i].colors.facingBlue = blocks[i].colors.facingRed;
+            blocks[i].colors.facingRed = "";
+          } else if (blocks[i].currentPosition === 20) {
+            blocks[i].currentPosition = 15;
+            blocks[i].colors.facingGreen = blocks[i].colors.facingOrange;
+            blocks[i].colors.facingOrange = blocks[i].colors.facingBlue;
+            blocks[i].colors.facingBlue = "";
+          } else if (blocks[i].currentPosition === 15) {
+            blocks[i].currentPosition = 14;
+            blocks[i].colors.facingRed = blocks[i].colors.facingGreen;
+            blocks[i].colors.facingGreen = blocks[i].colors.facingOrange;
+            blocks[i].colors.facingOrange = "";
+          }
+        } else if (blocks[i].type === "E") {
+          if (blocks[i].currentPosition === 7) {
+            blocks[i].currentPosition = 12;
+            blocks[i].colors.facingBlue = blocks[i].colors.facingRed;
+            blocks[i].colors.facingRed = "";
+          } else if (blocks[i].currentPosition === 12) {
+            blocks[i].currentPosition = 8;
+            blocks[i].colors.facingOrange = blocks[i].colors.facingBlue;
+            blocks[i].colors.facingBlue = "";
+          } else if (blocks[i].currentPosition === 8) {
+            blocks[i].currentPosition = 2;
+            blocks[i].colors.facingGreen = blocks[i].colors.facingOrange;
+            blocks[i].colors.facingOrange = "";
+          } else if (blocks[i].currentPosition === 2) {
+            blocks[i].currentPosition = 7;
+            blocks[i].colors.facingRed = blocks[i].colors.facingGreen;
+            blocks[i].colors.facingGreen = "";
+          }
+        }
+      }
+    }
+    renderMapedCube();
+  }
+  function rotateBlueSide() {
+    for (var i = 0; i < blocks.length; i++) {
+      if (blocks[i].colors.facingBlue !== "") {
+        if (blocks[i].type === "C") {
+          if (blocks[i].currentPosition === 17) {
+            blocks[i].currentPosition = 18;
+            blocks[i].colors.facingBlack = blocks[i].colors.facingRed;
+            blocks[i].colors.facingRed = blocks[i].colors.facingYellow;
+            blocks[i].colors.facingYellow = "";
+          } else if (blocks[i].currentPosition === 18) {
+            blocks[i].currentPosition = 19;
+            blocks[i].colors.facingOrange = blocks[i].colors.facingBlack;
+            blocks[i].colors.facingBlack = blocks[i].colors.facingRed;
+            blocks[i].colors.facingRed = "";
+          } else if (blocks[i].currentPosition === 19) {
+            blocks[i].currentPosition = 20;
+            blocks[i].colors.facingYellow = blocks[i].colors.facingOrange;
+            blocks[i].colors.facingOrange = blocks[i].colors.facingBlack;
+            blocks[i].colors.facingBlack = "";
+          } else if (blocks[i].currentPosition === 20) {
+            blocks[i].currentPosition = 17;
+            blocks[i].colors.facingRed = blocks[i].colors.facingYellow;
+            blocks[i].colors.facingYellow = blocks[i].colors.facingOrange;
+            blocks[i].colors.facingOrange = "";
+          }
+        } else if (blocks[i].type === "E") {
+          if (blocks[i].currentPosition === 11) {
+            blocks[i].currentPosition = 10;
+            blocks[i].colors.facingBlack = blocks[i].colors.facingRed;
+            blocks[i].colors.facingRed = "";
+          } else if (blocks[i].currentPosition === 10) {
+            blocks[i].currentPosition = 9;
+            blocks[i].colors.facingOrange = blocks[i].colors.facingBlack;
+            blocks[i].colors.facingBlack = "";
+          } else if (blocks[i].currentPosition === 9) {
+            blocks[i].currentPosition = 12;
+            blocks[i].colors.facingYellow = blocks[i].colors.facingOrange;
+            blocks[i].colors.facingOrange = "";
+          } else if (blocks[i].currentPosition === 12) {
+            blocks[i].currentPosition = 11;
+            blocks[i].colors.facingRed = blocks[i].colors.facingYellow;
+            blocks[i].colors.facingYellow = "";
+          }
+        }
+      }
+    }
+    renderMapedCube();
+  }
+  function rotateOrangeSide() {
+    for (var i = 0; i < blocks.length; i++) {
+      if (blocks[i].colors.facingOrange !== "") {
+        if (blocks[i].type === "C") {
+          if (blocks[i].currentPosition === 16) {
+            blocks[i].currentPosition = 15;
+            blocks[i].colors.facingYellow = blocks[i].colors.facingGreen;
+            blocks[i].colors.facingGreen = blocks[i].colors.facingBlack;
+            blocks[i].colors.facingBlack = "";
+          } else if (blocks[i].currentPosition === 15) {
+            blocks[i].currentPosition = 20;
+            blocks[i].colors.facingBlue = blocks[i].colors.facingYellow;
+            blocks[i].colors.facingYellow = blocks[i].colors.facingGreen;
+            blocks[i].colors.facingGreen = "";
+          } else if (blocks[i].currentPosition === 20) {
+            blocks[i].currentPosition = 19;
+            blocks[i].colors.facingBlack = blocks[i].colors.facingBlue;
+            blocks[i].colors.facingBlue = blocks[i].colors.facingYellow;
+            blocks[i].colors.facingYellow = "";
+          } else if (blocks[i].currentPosition === 19) {
+            blocks[i].currentPosition = 16;
+            blocks[i].colors.facingGreen = blocks[i].colors.facingBlack;
+            blocks[i].colors.facingBlack = blocks[i].colors.facingBlue;
+            blocks[i].colors.facingBlue = "";
+          }
+        } else if (blocks[i].type === "E") {
+          if (blocks[i].currentPosition === 3) {
+            blocks[i].currentPosition = 8;
+            blocks[i].colors.facingYellow = blocks[i].colors.facingGreen;
+            blocks[i].colors.facingGreen = "";
+          } else if (blocks[i].currentPosition === 8) {
+            blocks[i].currentPosition = 9;
+            blocks[i].colors.facingBlue = blocks[i].colors.facingYellow;
+            blocks[i].colors.facingYellow = "";
+          } else if (blocks[i].currentPosition === 9) {
+            blocks[i].currentPosition = 5;
+            blocks[i].colors.facingBlack = blocks[i].colors.facingBlue;
+            blocks[i].colors.facingBlue = "";
+          } else if (blocks[i].currentPosition === 5) {
+            blocks[i].currentPosition = 3;
+            blocks[i].colors.facingGreen = blocks[i].colors.facingBlack;
+            blocks[i].colors.facingBlack = "";
+          }
+        }
+      }
+    }
+    renderMapedCube();
+  }
+  function rotateBlackSide() {
+    for (var i = 0; i < blocks.length; i++) {
+      if (blocks[i].colors.facingBlack !== "") {
+        if (blocks[i].type === "C") {
+          if (blocks[i].currentPosition === 18) {
+            blocks[i].currentPosition = 13;
+            blocks[i].colors.facingGreen = blocks[i].colors.facingRed;
+            blocks[i].colors.facingRed = blocks[i].colors.facingBlue;
+            blocks[i].colors.facingBlue = "";
+          } else if (blocks[i].currentPosition === 13) {
+            blocks[i].currentPosition = 16;
+            blocks[i].colors.facingOrange = blocks[i].colors.facingGreen;
+            blocks[i].colors.facingGreen = blocks[i].colors.facingRed;
+            blocks[i].colors.facingRed = "";
+          } else if (blocks[i].currentPosition === 16) {
+            blocks[i].currentPosition = 19;
+            blocks[i].colors.facingBlue = blocks[i].colors.facingOrange;
+            blocks[i].colors.facingOrange = blocks[i].colors.facingGreen;
+            blocks[i].colors.facingGreen = "";
+          } else if (blocks[i].currentPosition === 19) {
+            blocks[i].currentPosition = 18;
+            blocks[i].colors.facingRed = blocks[i].colors.facingBlue;
+            blocks[i].colors.facingBlue = blocks[i].colors.facingOrange;
+            blocks[i].colors.facingOrange = "";
+          }
+        } else if (blocks[i].type === "E") {
+          if (blocks[i].currentPosition === 6) {
+            blocks[i].currentPosition = 4;
+            blocks[i].colors.facingGreen = blocks[i].colors.facingRed;
+            blocks[i].colors.facingRed = "";
+          } else if (blocks[i].currentPosition === 4) {
+            blocks[i].currentPosition = 5;
+            blocks[i].colors.facingOrange = blocks[i].colors.facingGreen;
+            blocks[i].colors.facingGreen = "";
+          } else if (blocks[i].currentPosition === 5) {
+            blocks[i].currentPosition = 10;
+            blocks[i].colors.facingBlue = blocks[i].colors.facingOrange;
+            blocks[i].colors.facingOrange = "";
+          } else if (blocks[i].currentPosition === 10) {
+            blocks[i].currentPosition = 6;
+            blocks[i].colors.facingRed = blocks[i].colors.facingBlue;
+            blocks[i].colors.facingBlue = "";
+          }
+        }
+      }
+    }
+    renderMapedCube();
+  }
+
+  function isEverythingInOrder() {
+    var res = true;
+    for (var i = 0; i < blocks.length; i++) {
+      if (blocks[i].homePosition === null) {
+        res = false;
+      }
+    }
+    return res;
+  }
+  function calculateHome(color1, color2, color3) {
+    if (color3 === "") {
+      if (color1 === "green" || color2 === "green") {
+        if (color1 === "red" || color2 === "red") {
+          return 1;
+        } else if (color1 === "yellow" || color2 === "yellow") {
+          return 2;
+        } else if (color1 === "orange" || color2 === "orange") {
+          return 3;
+        } else if (color1 === "black" || color2 === "black") {
+          return 4;
+        }
+      } else if (color1 === "blue" || color2 === "blue") {
+        if (color1 === "orange" || color2 === "orange") {
+          return 9;
+        } else if (color1 === "black" || color2 === "black") {
+          return 10;
+        } else if (color1 === "red" || color2 === "red") {
+          return 11;
+        } else if (color1 === "yellow" || color2 === "yellow") {
+          return 12;
+        }
+      } else if (color1 === "red" || color2 === "red") {
+        if (color1 === "black" || color2 === "black") {
+          return 6;
+        } else if (color1 === "yellow" || color2 === "yellow") {
+          return 7;
+        }
+      } else if (color1 === "orange" || color2 === "orange") {
+        if (color1 === "black" || color2 === "black") {
+          return 5;
+        } else if (color1 === "yellow" || color2 === "yellow") {
+          return 8;
+        }
+      }
+    } else {
+      if (color1 === "green" || color2 === "green" || color3 === "green") {
+        if (color1 === "red" || color2 === "red" || color3 === "red") {
+          if (
+            color1 === "yellow" ||
+            color2 === "yellow" ||
+            color3 === "yellow"
+          ) {
+            return 14;
+          } else if (
+            color1 === "black" ||
+            color2 === "black" ||
+            color3 === "black"
+          ) {
+            return 13;
+          }
+        } else if (
+          color1 === "orange" ||
+          color2 === "orange" ||
+          color3 === "orange"
+        ) {
+          if (
+            color1 === "yellow" ||
+            color2 === "yellow" ||
+            color3 === "yellow"
+          ) {
+            return 15;
+          } else if (
+            color1 === "black" ||
+            color2 === "black" ||
+            color3 === "black"
+          ) {
+            return 16;
+          }
+        }
+      } else if (color1 === "blue" || color2 === "blue" || color3 === "blue") {
+        if (color1 === "red" || color2 === "red" || color3 === "red") {
+          if (
+            color1 === "yellow" ||
+            color2 === "yellow" ||
+            color3 === "yellow"
+          ) {
+            return 17;
+          }
+          if (color1 === "black" || color2 === "black" || color3 === "black") {
+            return 18;
+          }
+        } else if (
+          color1 === "orange" ||
+          color2 === "orange" ||
+          color3 === "orange"
+        ) {
+          if (
+            color1 === "yellow" ||
+            color2 === "yellow" ||
+            color3 === "yellow"
+          ) {
+            return 20;
+          }
+          if (color1 === "black" || color2 === "black" || color3 === "black") {
+            return 19;
+          }
+        }
+      }
+    }
+    return null;
+  }
+function flipFirstLayerEdge(face, left){
+  rotate(face, false);
+  rotate('green', true);
+  rotate(left, false);
+  rotate('green', false);
+}
+
+  function flipFirstLayerEdgePosition(notGreen){
+    if (notGreen === 'red'){
+      flipFirstLayerEdge('red', 'yellow');
+    } else if (notGreen === 'yellow'){
+      flipFirstLayerEdge('yellow', 'orange');
+    } else if (notGreen === 'orange'){
+      flipFirstLayerEdge('orange', 'black');
+    } else if (notGreen === 'black'){
+      flipFirstLayerEdge('black', 'red');
+    } 
+  }
+  function placeEdgeInButton(face){
+    rotate(face, false);
+    rotate('blue', true);
+    rotate(face, true);
+  }
+  function putFirstLayerEdgeInPlaceFromBottom(face, left){
+    rotate(face, true);
+    rotate('green', true);
+    rotate(left, false);
+    rotate('green', false);
+  }
+var index;
+  function SolveFirstLayerEdges(notGreen, homePos) {
+    index = blocks.findIndex(x=>x.homePosition === homePos);
+    if (blocks[index].currentPosition === homePos){
+      if (blocks[index].colors.facingGreen !== 'green'){
+        flipFirstLayerEdgePosition(notGreen);
+      }
+    } else if (blocks[index].currentPosition < 5){
+      if (blocks[index].currentPosition === 4){
+        rotate('black', true);
+        rotate('black', true);
+      } else if (blocks[index].currentPosition === 3){
+        rotate('orange', true);
+        rotate('orange', true);
+      } else if (blocks[index].currentPosition === 1){
+        rotate('red', true);
+        rotate('red', true);
+      } else if (blocks[index].currentPosition === 2){
+        rotate('yellow', true);
+        rotate('yellow', true);
+      }
+    } else if (blocks[index].currentPosition < 9){
+      if (blocks[index].currentPosition === 5){
+        placeEdgeInButton('orange');
+      } else if (blocks[index].currentPosition === 6){
+        placeEdgeInButton('black');
+      } else if (blocks[index].currentPosition === 7){
+        placeEdgeInButton('red');
+      } else if (blocks[index].currentPosition === 8){
+        placeEdgeInButton('yellow');
+      }  
+    }
+    if (blocks[index].currentPosition > 8){
+      for (var i = 0; i < 4; i++){
+        if (blocks[index].homePosition === 1){
+          if (blocks[index].currentPosition === 11){
+            if (blocks[index].colors.facingRed === 'red'){
+              rotate('red', true);
+              rotate('red', true);
+            } else {
+              putFirstLayerEdgeInPlaceFromBottom('red', 'yellow');
+            }
+            i = 6;
+          }
+          else {
+          rotate('blue', true);
+        }
+        }
+        else if (blocks[index].homePosition === 2){
+          if (blocks[index].currentPosition === 12){
+            if (blocks[index].colors.facingYellow === 'yellow'){
+              rotate('yellow', true);
+              rotate('yellow', true);
+            } else {
+              putFirstLayerEdgeInPlaceFromBottom('yellow', 'orange');
+            }
+            i = 6;
+          }
+          else {
+          rotate('blue', true);
+        }
+        }
+        else if (blocks[index].homePosition === 3){
+          if (blocks[index].currentPosition === 9){
+            if (blocks[index].colors.facingOrange === 'orange'){
+              rotate('orange', true);
+              rotate('orange', true);
+            } else {
+              putFirstLayerEdgeInPlaceFromBottom('orange', 'black');
+            }
+            i = 6;
+          }
+          else {
+          rotate('blue', true);
+        }
+        }
+        else if (blocks[index].homePosition === 4){
+          if (blocks[index].currentPosition === 10){
+            if (blocks[index].colors.facingBlack === 'black'){
+              rotate('black', true);
+              rotate('black', true);
+            } else {
+              putFirstLayerEdgeInPlaceFromBottom('black', 'red');
+            }
+            i = 6;
+          } else {
+          rotate('blue', true);
+        }
+        }
+      }
+    }
+  }
+
+  function completeCornerAlgorithm(sideColor, bottomColor){
+    rotate(sideColor, false);
+    rotate(bottomColor, false);
+    rotate(sideColor, true);
+    rotate(bottomColor, true);
+  }
+
+  function SolveFirstLayerCorners(homePos) {
+    index = blocks.findIndex(x=>x.homePosition === homePos);
+    var currentPositionForCornerInTopLayesNotAtHome = blocks[index].currentPosition;
+    if (currentPositionForCornerInTopLayesNotAtHome === homePos){
+      var secure1 = 0;
+      while(blocks[index].colors.facingGreen !== 'green'){
+        secure1++;
+        if (homePos === 13){
+          completeCornerAlgorithm('black', 'blue');
+          completeCornerAlgorithm('black', 'blue');
+        } else if (homePos === 14) {
+          completeCornerAlgorithm('red', 'blue');
+          completeCornerAlgorithm('red', 'blue');
+        } else if (homePos === 15) {
+          completeCornerAlgorithm('yellow', 'blue');
+          completeCornerAlgorithm('yellow', 'blue');
+        } else if (homePos === 16) {
+          completeCornerAlgorithm('orange', 'blue');
+          completeCornerAlgorithm('orange', 'blue');
+        }
+        if (secure1 > 5){
+          break;
+        }
+      }
+    } else if (currentPositionForCornerInTopLayesNotAtHome < 17){
+      if (currentPositionForCornerInTopLayesNotAtHome === 13){
+          completeCornerAlgorithm('black', 'blue');
+        } else if (currentPositionForCornerInTopLayesNotAtHome === 14) {
+          completeCornerAlgorithm('red', 'blue');
+        } else if (currentPositionForCornerInTopLayesNotAtHome === 15) {
+          completeCornerAlgorithm('yellow', 'blue');
+        } else if (currentPositionForCornerInTopLayesNotAtHome === 16) {
+          completeCornerAlgorithm('orange', 'blue');
+        }
+      } 
+       if (blocks[index].currentPosition > 16){
+        var positionUnderHomePosition;
+        if (homePos === 13){
+          positionUnderHomePosition = 18; 
+        } else if (homePos === 14){
+          positionUnderHomePosition = 17; 
+        } else if (homePos === 15){
+          positionUnderHomePosition = 20;       
+        } else if (homePos === 16){
+          positionUnderHomePosition = 19;       
+        }
+        var securityCheck = 0;
+        while (blocks[index].currentPosition !== positionUnderHomePosition){
+          securityCheck++;
+          rotate('blue', true);
+          if (securityCheck > 6){
+            break;
+          }
+        }
+        if (homePos === 13){
+          completeCornerAlgorithm('black', 'blue');
+        } else if (homePos === 14) {
+          completeCornerAlgorithm('red', 'blue');
+        } else if (homePos === 15) {
+          completeCornerAlgorithm('yellow', 'blue');
+        } else if (homePos === 16) {
+          completeCornerAlgorithm('orange', 'blue');
+        }
+        var secure2 = 0;
+        while(blocks[index].colors.facingGreen !== 'green'){
+        secure2++;
+          if (homePos === 13){
+          completeCornerAlgorithm('black', 'blue');
+          completeCornerAlgorithm('black', 'blue');
+        } else if (homePos === 14) {
+          completeCornerAlgorithm('red', 'blue');
+          completeCornerAlgorithm('red', 'blue');
+        } else if (homePos === 15) {
+          completeCornerAlgorithm('yellow', 'blue');
+          completeCornerAlgorithm('yellow', 'blue');
+        } else if (homePos === 16) {
+          completeCornerAlgorithm('orange', 'blue');
+          completeCornerAlgorithm('orange', 'blue');
+        }
+        if (secure2 > 6){
+          break;
+        }
+      }
+      }
+  }
+  function solveSecondLayer(homePos) {
+    index = blocks.findIndex(x=>x.homePosition === homePos);
+    if(blocks[index].currentPosition < 9){
+      if(blocks[index].currentPosition === homePos){
+        if(blocks[index].colors.facingRed === 'red' || blocks[index].colors.facingOrange === 'orange'){
+          //DONE
+        } else if (homePos === 5){
+          putSecondLayerLeft('black')
+        } else if (homePos === 6){
+          putSecondLayerLeft('red')
+        } else if (homePos === 7){
+          putSecondLayerLeft('yellow')
+        } else if (homePos === 8){
+          putSecondLayerLeft('orange')
+        }
+      } else if (blocks[index].currentPosition < 9){
+        if (blocks[index].colors.facingRed !== ''){
+          if (blocks[index].colors.facingYellow !== ''){
+            putSecondLayerRight('red');
+          } else {
+            putSecondLayerLeft('red');
+          }
+        } else{
+          if (blocks[index].colors.facingYellow !== ''){
+            putSecondLayerLeft('orange');
+          } else { 
+            putSecondLayerRight('orange');
+          }
+        }
+      }
+    }
+    if (blocks[index].currentPosition > 8){
+      for (var i = 0; i < 4; i++){
+        if (homePos === 5){
+          if (blocks[index].colors.facingOrange === 'orange'){
+            putSecondLayerRight('orange');  
+            break;
+          } else if (blocks[index].colors.facingBlack === 'black'){
+            putSecondLayerLeft('black');
+            break;  
+          }
+          else{
+            rotate('blue', true);
+          }
+        } else if (homePos === 6){
+          if (blocks[index].colors.facingRed === 'red'){
+            putSecondLayerLeft('red');  
+            break;
+          } else if (blocks[index].colors.facingBlack === 'black'){
+            putSecondLayerRight('black');
+            break;  
+          }
+          else{
+            rotate('blue', true);
+          }
+        } else if (homePos === 7){
+          if (blocks[index].colors.facingRed === 'red'){
+            putSecondLayerRight('red');  
+            break;
+          } else if (blocks[index].colors.facingYellow === 'yellow'){
+            putSecondLayerLeft('yellow');
+            break;  
+          }
+          else{
+            rotate('blue', true);
+          }
+        } else if (homePos === 8){
+          if (blocks[index].colors.facingOrange === 'orange'){
+            putSecondLayerLeft('orange');  
+            break;
+          } else if (blocks[index].colors.facingYellow === 'yellow'){
+            putSecondLayerRight('yellow');
+            break;  
+          }
+          else{
+            rotate('blue', true);
+          }
+        }
+      }
+    }
+  } 
+  function putSecondLayerLeft(front){
+    var top = 'blue';
+    var left;
+    if (front === 'black'){
+      left = 'orange';
+    } else if (front === 'orange'){
+      left = 'yellow';
+    } else if (front === 'yellow'){
+      left = 'red';
+    } else if (front === 'red'){
+      left = 'black';
+    }
+    rotate(top, false);
+    rotate(left, false);
+    rotate(top, true);
+    rotate(left, true);
+    rotate(top, true);
+    rotate(front, true);
+    rotate(top, false);
+    rotate(front, false);
+  }
+  function putSecondLayerRight(front){
+    var top = 'blue';
+    var right;
+    if (front === 'black'){
+      right = 'red';
+    } else if (front === 'orange'){
+      right = 'black';
+    } else if (front === 'yellow'){
+      right = 'orange';
+    } else if (front === 'red'){
+      right = 'yellow';
+    }
+    rotate(top, true);
+    rotate(right, true);
+    rotate(top, false);
+    rotate(right, false);
+    rotate(top, false);
+    rotate(front, false);
+    rotate(top, true);
+    rotate(front, true);
+  }
+  function numberOfBlueInCross(){
+    var count = 0;
+    for (var i = 9; i < 13; i++){
+      if (blocks.find(x => x.currentPosition === i).colors.facingBlue === 'blue'){
+        count++;
+      }
+    }
+    return count;
+  }
+  function fromBlueLToCross(front, right, top){
+    rotate(front, true);
+    rotate(right, true);
+    rotate(top, true);
+    rotate(right, false);
+    rotate(top, false);
+    rotate(right, true);
+    rotate(top, true);
+    rotate(right, false);
+    rotate(top, false);
+    rotate(front, false);
+  }
+  function fromBlueLineToCrossOrNothingToL(front, right, top){
+    rotate(front, true);
+    rotate(right, true);
+    rotate(top, true);
+    rotate(right, false);
+    rotate(top, false);
+    rotate(front, false);
+  }
+  function calculateTheShapeOfBlue(){
+    var countToCalculateShape = 0;
+    for (var i = 9; i < 13; i++){
+      if (blocks.find(x=> x.homePosition === i).colors.facingBlue === 'blue'){
+        countToCalculateShape = countToCalculateShape + blocks.find(x=> x.homePosition === i).currentPosition;
+      }
+    }
+    if (countToCalculateShape === 20 || countToCalculateShape === 22){
+      return 'pipe';
+    }
+    else {
+      return 'L';
+    }
+  }
+  function solveBlueCross(){
+    var numberOfBlue = numberOfBlueInCross();
+    if (numberOfBlue === 0){
+      fromBlueLineToCrossOrNothingToL('orange', 'black', 'blue');
+      fromBlueLToCross('red', 'yellow', 'blue');
+    } else if (numberOfBlue === 2){
+      var shape = calculateTheShapeOfBlue();
+      if(shape === 'pipe'){
+        if (blocks.find(x => x.currentPosition === 12).colors.facingBlue === 'blue'){
+          fromBlueLineToCrossOrNothingToL('orange', 'black', 'blue');
+        }
+        else {
+          fromBlueLineToCrossOrNothingToL('yellow', 'orange', 'blue');
+        }
+      } else {
+        if (blocks.find(x => x.currentPosition === 9).colors.facingBlue === 'blue' && blocks.find(x => x.currentPosition === 10).colors.facingBlue === 'blue'){
+          fromBlueLToCross('red', 'yellow', 'blue');
+        } else if (blocks.find(x => x.currentPosition === 10).colors.facingBlue === 'blue' && blocks.find(x => x.currentPosition === 11).colors.facingBlue === 'blue'){
+          fromBlueLToCross('yellow', 'orange', 'blue');
+        } else if (blocks.find(x => x.currentPosition === 11).colors.facingBlue === 'blue' && blocks.find(x => x.currentPosition === 12).colors.facingBlue === 'blue'){
+          fromBlueLToCross('orange', 'black', 'blue');
+        } else if (blocks.find(x => x.currentPosition === 12).colors.facingBlue === 'blue' && blocks.find(x => x.currentPosition === 9).colors.facingBlue === 'blue'){
+          fromBlueLToCross('black', 'red', 'blue');          
+        }
+      }
+    } 
+  }
+
+  function calculateBlueCrossPositions(){
+    var count;
+    for (var i = 0; i < 5; i++){
+      count = 0;
+      if (blocks.find(x => x.homePosition === 9).currentPosition === 9){
+        count = count + 9;
+      } 
+      if (blocks.find(x => x.homePosition === 10).currentPosition === 10){
+        count = count + 10;
+      } 
+      if (blocks.find(x => x.homePosition === 11).currentPosition === 11){
+        count = count + 11;
+      } 
+      if (blocks.find(x => x.homePosition === 12).currentPosition === 12){
+        count = count + 12;
+      }
+      if (count < 18){
+        rotate('blue', true);
+      } else{
+        break;
+      }
+    } 
+    if (count === 20 || count === 22 ){
+      return 'pipe';
+    } else if (count === 42){
+      return 'cross';
+    }
+    else {
+      return 'L';
+    }
+    //return enten 'pipe', 'L' eller 'Cross'
+  }
+  function positioningBlueCross(right){
+    rotate(right, true);
+    rotate('blue', true);
+    rotate(right, false);
+    rotate('blue', true);
+    rotate(right, true);
+    rotate('blue', true);
+    rotate('blue', true);
+    rotate(right, false);
+  }
+  function PositionBlueCross(){
+    var blueCrossPositions = calculateBlueCrossPositions();
+    var goFromPipeToSolvedColor = '';
+    if (blueCrossPositions === 'pipe'){
+      if (blocks.find(x => x.homePosition === 9).currentPosition === 9){
+        goFromPipeToSolvedColor = 'yellow';
+      }
+      else {
+        goFromPipeToSolvedColor = 'orange';
+      }
+      positioningBlueCross(goFromPipeToSolvedColor);
+      rotate('blue', false);
+      positioningBlueCross(goFromPipeToSolvedColor);        
+      rotate('blue', true);
+      rotate('blue', true);
+    } else if (blueCrossPositions === 'L'){
+      if (blocks.find(x => x.homePosition === 9).currentPosition === 9 && blocks.find(x => x.homePosition === 10).currentPosition === 10){
+          positioningBlueCross('orange');
+        } else if (blocks.find(x => x.homePosition === 10).currentPosition === 10 && blocks.find(x => x.homePosition === 11).currentPosition === 11){
+          positioningBlueCross('black');
+        } else if (blocks.find(x => x.homePosition === 11).currentPosition === 11 && blocks.find(x => x.homePosition === 12).currentPosition === 12){
+          positioningBlueCross('red');
+        } else if (blocks.find(x => x.homePosition === 12).currentPosition === 12 && blocks.find(x => x.homePosition === 9).currentPosition === 9){
+          positioningBlueCross('yellow');
+        }
+        rotate('blue', true);
+    }
+  }
+
+  function getNumberOfCornersOnRightPositionInTopLayer(){
+    var count = 0;
+    for (var i = 17; i < 21; i++){
+      if (blocks.find(x => x.currentPosition === i).homePosition === i){
+        count = count + blocks.find(x => x.currentPosition === i).homePosition;
+      }
+    }
+    return count;
+  }
+
+  function rotateCornersInTopLayer(left, right){
+    rotate('blue', true);
+    rotate(right, true);
+    rotate('blue', false);
+    rotate(left, false);
+    rotate('blue', true);
+    rotate(right, false);
+    rotate('blue', false);
+    rotate(left, true);
+  }
+
+  function positionCornorsInTopLayer(){
+    var numberOfCornersOnRightPosition;
+    for (var i = 0; i < 4; i++){
+      numberOfCornersOnRightPosition = getNumberOfCornersOnRightPositionInTopLayer();
+      if (numberOfCornersOnRightPosition === 0){
+        rotateCornersInTopLayer('orange', 'red');
+      } else if (numberOfCornersOnRightPosition < 21){
+        if (numberOfCornersOnRightPosition === 17){
+        rotateCornersInTopLayer('black', 'yellow');
+        } else if (numberOfCornersOnRightPosition === 18){
+          rotateCornersInTopLayer('orange', 'red');
+        } else if (numberOfCornersOnRightPosition === 19){
+          rotateCornersInTopLayer('yellow', 'black');
+        } else if (numberOfCornersOnRightPosition === 20){
+          rotateCornersInTopLayer('red', 'orange');
+        }
+      } else if (numberOfCornersOnRightPosition > 21){
+        break;
+      }
+    }
+  }
+
+  function flipCornersInTopLayer(){
+    for (var i = 0; i < 4; i++){
+      var safetyCheck = 0;
+      while (blocks.find(x => x.currentPosition === 17).colors.facingBlue !== 'blue'){
+        completeCornerAlgorithm('yellow', 'green');
+        completeCornerAlgorithm('yellow', 'green');
+        safetyCheck++;
+        if (safetyCheck === 6){
+          console.log('something went wrong in whileLoop');
+          break;
+        }
+      }
+      rotate('blue', false);
+    }
+  }
+
+var solveStartet = false;
+
+  var copyArray = [];
+  function saveCurrentSolution(){
+    copyArray.push(blocks.slice());
+    console.log("slicing");
+  }
+
+  function startSolve() {
+    indexForCopy = 0;
+    solveStartet = true;
+    SolveFirstLayerEdges('red', 1);
+    SolveFirstLayerEdges('yellow', 2);
+    SolveFirstLayerEdges('orange', 3);
+    SolveFirstLayerEdges('black', 4);
+    console.log("DONE WITH GREEN CROSS");
+    // moves.push("DONE WITH GREEN CROSS");
+
+    SolveFirstLayerCorners(13);
+    SolveFirstLayerCorners(14);
+    SolveFirstLayerCorners(15);
+    SolveFirstLayerCorners(16);
+    console.log("DONE WITH GREEN SIDE");
+    // moves.push("DONE WITH GREEN SIDE");
+
+    solveSecondLayer(5);
+    solveSecondLayer(6);
+    solveSecondLayer(7);
+    solveSecondLayer(8);
+    console.log("DONE WITH SECOND LAYER");
+    // moves.push("DONE WITH SECOND LAYER");
+
+    solveBlueCross();
+    console.log("DONE WITH BLUE CROSS");
+    // moves.push("DONE WITH BLUE CROSS");
+
+    PositionBlueCross();
+    console.log("DONE WITH POSITIONING BLUE CROSS");
+    // moves.push("DONE WITH POSITIONING BLUE CROSS");
+
+    positionCornorsInTopLayer();
+    console.log("DONE WITH POSITIONNING CORNERS IN TOP LAYER");
+    // moves.push("DONE WITH POSITIONNING CORNERS IN TOP LAYER");
+
+    flipCornersInTopLayer();
+    console.log("FUCKING DONE");
+    // moves.push("DONE");
+
+    for (var i = 0; i < moves.length; i++){
+      // alert(moves[i]);
+      var node = document.createElement("SPAN");
+      var textnode = document.createTextNode(moves[i] + "   ");
+      node.onmouseover = renderMapedCubeOnMouseOver(copyArray[i]);
+      node.appendChild(textnode);
+      document.getElementById('moves').appendChild(node);
+    }
+  }
+
+  function renderMapedCubeOnMouseOver(currentArray) {
+    document.getElementById("green1").style.backgroundColor = currentArray.find(
+      x => x.currentPosition === 13
+    ).colors.facingGreen;
+    document.getElementById("green2").style.backgroundColor = currentArray.find(
+      x => x.currentPosition === 1
+    ).colors.facingGreen;
+    document.getElementById("green3").style.backgroundColor = currentArray.find(
+      x => x.currentPosition === 14
+    ).colors.facingGreen;
+    document.getElementById("green4").style.backgroundColor = currentArray.find(
+      x => x.currentPosition === 4
+    ).colors.facingGreen;
+    document.getElementById("green6").style.backgroundColor = currentArray.find(
+        x => x.currentPosition === 2
+    ).colors.facingGreen;
+    document.getElementById("green7").style.backgroundColor = currentArray.find(
+        x => x.currentPosition === 16
+    ).colors.facingGreen;
+    document.getElementById("green8").style.backgroundColor = currentArray.find(
+      x => x.currentPosition === 3
+    ).colors.facingGreen;
+    document.getElementById("green9").style.backgroundColor = currentArray.find(
+        x => x.currentPosition === 15
+    ).colors.facingGreen;
+    document.getElementById("red1").style.backgroundColor = currentArray.find(
+      x => x.currentPosition === 18
+    ).colors.facingRed;
+    document.getElementById("red2").style.backgroundColor = currentArray.find(
+        x => x.currentPosition === 11
+    ).colors.facingRed;
+    document.getElementById("red3").style.backgroundColor = currentArray.find(
+      x => x.currentPosition === 17
+    ).colors.facingRed;
+    document.getElementById("red4").style.backgroundColor = currentArray.find(
+        x => x.currentPosition === 6
+    ).colors.facingRed;
+    document.getElementById("red6").style.backgroundColor = currentArray.find(
+    x => x.currentPosition === 7
+    ).colors.facingRed;
+    document.getElementById("red7").style.backgroundColor = currentArray.find(
+        x => x.currentPosition === 13
+    ).colors.facingRed;
+    document.getElementById("red8").style.backgroundColor = currentArray.find(
+      x => x.currentPosition === 1
+    ).colors.facingRed;
+    document.getElementById("red9").style.backgroundColor = currentArray.find(
+        x => x.currentPosition === 14
+    ).colors.facingRed;
+    document.getElementById("orange1").style.backgroundColor = currentArray.find(
+      x => x.currentPosition === 16
+    ).colors.facingOrange;
+    document.getElementById("orange2").style.backgroundColor = currentArray.find(
+      x => x.currentPosition === 3
+    ).colors.facingOrange;
+    document.getElementById("orange3").style.backgroundColor = currentArray.find(
+      x => x.currentPosition === 15
+    ).colors.facingOrange;
+    document.getElementById("orange4").style.backgroundColor = currentArray.find(
+      x => x.currentPosition === 5
+    ).colors.facingOrange;
+    document.getElementById("orange6").style.backgroundColor = currentArray.find(
+      x => x.currentPosition === 8
+    ).colors.facingOrange;
+    document.getElementById("orange7").style.backgroundColor = currentArray.find(
+      x => x.currentPosition === 19
+    ).colors.facingOrange;
+    document.getElementById("orange8").style.backgroundColor = currentArray.find(
+        x => x.currentPosition === 9
+    ).colors.facingOrange;
+    document.getElementById("orange9").style.backgroundColor = currentArray.find(
+        x => x.currentPosition === 20
+    ).colors.facingOrange;
+    document.getElementById("black1").style.backgroundColor = currentArray.find(
+        x => x.currentPosition === 18
+    ).colors.facingBlack;
+    document.getElementById("black2").style.backgroundColor = currentArray.find(
+      x => x.currentPosition === 6
+    ).colors.facingBlack;
+    document.getElementById("black3").style.backgroundColor = currentArray.find(
+      x => x.currentPosition === 13
+    ).colors.facingBlack;
+    document.getElementById("black4").style.backgroundColor = currentArray.find(
+      x => x.currentPosition === 10
+    ).colors.facingBlack;
+    document.getElementById("black6").style.backgroundColor = currentArray.find(
+      x => x.currentPosition === 4
+    ).colors.facingBlack;
+    document.getElementById("black7").style.backgroundColor = currentArray.find(
+      x => x.currentPosition === 19
+    ).colors.facingBlack;
+    document.getElementById("black8").style.backgroundColor = currentArray.find(
+      x => x.currentPosition === 5
+    ).colors.facingBlack;
+    document.getElementById("black9").style.backgroundColor = currentArray.find(
+      x => x.currentPosition === 16
+    ).colors.facingBlack;
+    document.getElementById("yellow1").style.backgroundColor = currentArray.find(
+        x => x.currentPosition === 14
+    ).colors.facingYellow;
+    document.getElementById("yellow2").style.backgroundColor = currentArray.find(
+        x => x.currentPosition === 7
+    ).colors.facingYellow;
+    document.getElementById("yellow3").style.backgroundColor = currentArray.find(
+      x => x.currentPosition === 17
+    ).colors.facingYellow;
+    document.getElementById("yellow4").style.backgroundColor = currentArray.find(
+        x => x.currentPosition === 2
+    ).colors.facingYellow;
+    document.getElementById("yellow6").style.backgroundColor = currentArray.find(
+      x => x.currentPosition === 12
+    ).colors.facingYellow;
+    document.getElementById("yellow7").style.backgroundColor = currentArray.find(
+      x => x.currentPosition === 15
+    ).colors.facingYellow;
+    document.getElementById("yellow8").style.backgroundColor = currentArray.find(
+      x => x.currentPosition === 8
+    ).colors.facingYellow;
+    document.getElementById("yellow9").style.backgroundColor = currentArray.find(
+        x => x.currentPosition === 20
+    ).colors.facingYellow;
+    document.getElementById("blue1").style.backgroundColor = currentArray.find(
+        x => x.currentPosition === 17
+    ).colors.facingBlue;
+    document.getElementById("blue2").style.backgroundColor = currentArray.find(
+      x => x.currentPosition === 11
+    ).colors.facingBlue;
+    document.getElementById("blue3").style.backgroundColor = currentArray.find(
+      x => x.currentPosition === 18
+    ).colors.facingBlue;
+    document.getElementById("blue4").style.backgroundColor = currentArray.find(
+      x => x.currentPosition === 12
+    ).colors.facingBlue;
+    document.getElementById("blue6").style.backgroundColor = currentArray.find(
+      x => x.currentPosition === 10
+    ).colors.facingBlue;
+    document.getElementById("blue7").style.backgroundColor = currentArray.find(
+        x => x.currentPosition === 20
+    ).colors.facingBlue;
+    document.getElementById("blue8").style.backgroundColor = currentArray.find(
+        x => x.currentPosition === 9
+    ).colors.facingBlue;
+    document.getElementById("blue9").style.backgroundColor = currentArray.find(
+      x => x.currentPosition === 19
+    ).colors.facingBlue;
+  }
+</script>
